@@ -1,9 +1,6 @@
 '''
 Nathan Tarr's personal library of fuctions for daily workflow.
-
 '''
-import arcpy
-
 def AddArcMapSelections(raster, MUlist):
     '''
     (raster, list) -> selection
@@ -15,6 +12,7 @@ def AddArcMapSelections(raster, MUlist):
     raster -- the raster layer you want to select from.
     MUlist -- a python list of codes to select from the "VALUE" field.
     '''
+    import arcpy
     selectionType = "ADD_TO_SELECTION"
     sql = '"VALUE" = ' + str(MUlist[0])
     for m in MUlist[1:]:
@@ -32,6 +30,7 @@ def RemoveArcMapSelections(raster, MUlist):
     raster -- the raster layer you want to select from.
     MUlist -- a python list of codes to select from the "VALUE" field.
     '''
+    import arcpy
     selectionType = "REMOVE_FROM_SELECTION"
     sql = '"VALUE" = ' + str(MUlist[0])
     for m in MUlist[1:]:
@@ -51,6 +50,7 @@ def NewArcMapSelections(raster, MUlist):
     raster -- the raster layer you want to select from.
     MUlist -- a python list of codes to select from the "VALUE" field.
     '''
+    import arcpy
     selectionType = "NEW_SELECTION"
     sql = '"VALUE" = ' + str(MUlist[0])
     for m in MUlist[1:]:
