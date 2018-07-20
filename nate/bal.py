@@ -5,7 +5,7 @@ Created on Fri Jul 20 15:13:38 2018 by nmtarr
 Description: Functions with general use related to the USGS Biogeography
 Analysis Laboratory
 """
-def _connect_mongodb(host, port, username, password, db):
+def connect_mongodb(host, port, username, password, db):
     import pymongo
     """ A util for making a connection to mongo """
 
