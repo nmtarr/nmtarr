@@ -1,6 +1,22 @@
 '''
 Nathan Tarr's personal library of fuctions for daily workflow.
 '''
+
+def writeLog(content, log):
+    '''
+    (string, string) -> write to file
+    
+    Writes the text you provide to the log file you specify.
+    
+    Arguments:
+    content -- string to write to file
+    log -- the path of a log file
+    '''
+    print content
+    with open(log, 'a') as logDoc:
+        logDoc.write(content + '\n')
+            
+
 def AddArcMapSelections(raster, MUlist):
     '''
     (raster, list) -> selection
